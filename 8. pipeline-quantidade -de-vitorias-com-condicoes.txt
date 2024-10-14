@@ -1,0 +1,61 @@
+//4º questão: Calcular quantidade de vitórias em condições específicas
+[
+  {
+    "$lookup": {
+      "from": "jogadores",
+      "localField": "jogador1.nome",
+      "foreignField": "nickname",
+      "as": "jogador1_info"
+    }
+  },
+  {
+    "$lookup": {
+      "from": "jogadores",
+      "localField": "jogador2.nome",
+      "foreignField": "nickname",
+      "as": "jogador2_info"
+    }
+  },
+  {
+    "$unwind": "$jogador1_info"
+  },
+  {
+    "$unwind": "$jogador2_info"
+  },
+  {
+    "$addFields": {
+      "jogador1_info.half_trofeus": {
+        "$multiply": ["$jogador2_info.trofeus", 0.5]
+      },
+      "jogador2_info.half_trofeus": {
+        "$multiply": ["$jogador1_info.trofeus", 0.5]
+      }
+    }
+  },
+  {
+    "$match": {
+      "$or": [
+        {
+          "resultado.vencedor": "jogador1",
+          "resultado.torres_perdidas_jogador2": { "$gte": 2 },
+        },
+        {
+          "resultado.vencedor": "jogador2",
+          "resultado.torres_perdidas_jogador1": { "$gte": 2 },
+        }
+      ]
+    }
+  },
+  {
+    "$group": {
+      "_id": {
+        "$cond": [
+          { "$eq": ["$resultado.vencedor", "jogador1"] },
+          "$jogador1_info.nickname",
+          "$jogador2_info.nickname"
+        ]
+      },
+      "vitorias": { "$sum": 1 }
+    }
+  }
+]
