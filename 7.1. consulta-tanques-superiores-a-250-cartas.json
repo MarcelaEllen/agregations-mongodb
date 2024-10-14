@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "670be1d304b67fb06771d38b"
+  },
+  "nome": "Gigante",
+  "tipo": "Tanque",
+  "raridade": "Raro",
+  "poder": 300
+},
+{
+  "_id": {
+    "$oid": "670be1d304b67fb06771d38e"
+  },
+  "nome": "Golem",
+  "tipo": "Tanque",
+  "raridade": "Épico",
+  "poder": 800
+}]

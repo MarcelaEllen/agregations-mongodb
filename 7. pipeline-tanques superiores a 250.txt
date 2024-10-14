@@ -1,0 +1,11 @@
+//tanques superiores a 250
+[
+  {
+    $match: {
+      tipo: "Tanque",
+      poder: {
+        $gt: 250
+      }
+    }
+  }
+]

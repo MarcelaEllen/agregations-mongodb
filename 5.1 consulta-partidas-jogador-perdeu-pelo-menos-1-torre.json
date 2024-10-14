@@ -1,0 +1,282 @@
+[{
+  "_id": {
+    "$oid": "670be1d404b67fb06771d401"
+  },
+  "jogador1": {
+    "nome": "ThunderBolt",
+    "deck": [
+      {
+        "nome": "Arqueiras"
+      },
+      {
+        "nome": "Gigante"
+      },
+      {
+        "nome": "Pekka"
+      },
+      {
+        "nome": "Mini P.E.K.K.A"
+      }
+    ]
+  },
+  "jogador2": {
+    "nome": "DragonFury",
+    "deck": [
+      {
+        "nome": "Cavaleiro"
+      },
+      {
+        "nome": "Bola de Fogo"
+      },
+      {
+        "nome": "Valquíria"
+      },
+      {
+        "nome": "Canhão"
+      }
+    ]
+  },
+  "timestamp": 1697212200,
+  "resultado": {
+    "vencedor": "jogador1",
+    "perdedor": "jogador2",
+    "torres_perdidas_jogador1": 0,
+    "torres_perdidas_jogador2": 3,
+    "duracao": 120
+  }
+},
+{
+  "_id": {
+    "$oid": "670be1d404b67fb06771d402"
+  },
+  "jogador1": {
+    "nome": "ShadowHunter",
+    "deck": [
+      {
+        "nome": "Golem"
+      },
+      {
+        "nome": "Cavaleiro"
+      },
+      {
+        "nome": "Mini P.E.K.K.A"
+      },
+      {
+        "nome": "Flechas"
+      }
+    ]
+  },
+  "jogador2": {
+    "nome": "CrimsonKnight",
+    "deck": [
+      {
+        "nome": "Aríete de Batalha"
+      },
+      {
+        "nome": "Príncipe"
+      },
+      {
+        "nome": "Bombardeiro"
+      },
+      {
+        "nome": "Espírito de Gelo"
+      }
+    ]
+  },
+  "timestamp": 1697213100,
+  "resultado": {
+    "vencedor": "jogador1",
+    "perdedor": "jogador2",
+    "torres_perdidas_jogador1": 1,
+    "torres_perdidas_jogador2": 2,
+    "duracao": 150
+  }
+},
+{
+  "_id": {
+    "$oid": "670be1d404b67fb06771d403"
+  },
+  "jogador1": {
+    "nome": "FrostWolf",
+    "deck": [
+      {
+        "nome": "Gigante"
+      },
+      {
+        "nome": "Cavaleiro"
+      },
+      {
+        "nome": "Lápide"
+      },
+      {
+        "nome": "Goblins de Lança"
+      }
+    ]
+  },
+  "jogador2": {
+    "nome": "SteelTitan",
+    "deck": [
+      {
+        "nome": "Pekka"
+      },
+      {
+        "nome": "Valquíria"
+      },
+      {
+        "nome": "Arqueiras"
+      },
+      {
+        "nome": "Mago"
+      }
+    ]
+  },
+  "timestamp": 1697214000,
+  "resultado": {
+    "vencedor": "jogador1",
+    "perdedor": "jogador2",
+    "torres_perdidas_jogador1": 0,
+    "torres_perdidas_jogador2": 3,
+    "duracao": 180
+  }
+},
+{
+  "_id": {
+    "$oid": "670be1d404b67fb06771d408"
+  },
+  "jogador1": {
+    "nome": "TitanCrusher",
+    "deck": [
+      {
+        "nome": "Golem"
+      },
+      {
+        "nome": "Valquíria"
+      },
+      {
+        "nome": "Mago"
+      },
+      {
+        "nome": "Espírito de Gelo"
+      }
+    ]
+  },
+  "jogador2": {
+    "nome": "StormBringer",
+    "deck": [
+      {
+        "nome": "Cavaleiro"
+      },
+      {
+        "nome": "Bola de Fogo"
+      },
+      {
+        "nome": "Canhão"
+      },
+      {
+        "nome": "Arqueiras"
+      }
+    ]
+  },
+  "timestamp": 1697218500,
+  "resultado": {
+    "vencedor": "jogador1",
+    "perdedor": "jogador2",
+    "torres_perdidas_jogador1": 0,
+    "torres_perdidas_jogador2": 2,
+    "duracao": 160
+  }
+},
+{
+  "_id": {
+    "$oid": "670be1d404b67fb06771d410"
+  },
+  "jogador1": {
+    "nome": "ShadowHunter",
+    "deck": [
+      {
+        "nome": "Golem"
+      },
+      {
+        "nome": "Cavaleiro"
+      },
+      {
+        "nome": "Mini P.E.K.K.A"
+      },
+      {
+        "nome": "Flechas"
+      }
+    ]
+  },
+  "jogador2": {
+    "nome": "CrimsonKnight",
+    "deck": [
+      {
+        "nome": "Aríete de Batalha"
+      },
+      {
+        "nome": "Príncipe"
+      },
+      {
+        "nome": "Bombardeiro"
+      },
+      {
+        "nome": "Espírito de Gelo"
+      }
+    ]
+  },
+  "timestamp": 1697217600,
+  "resultado": {
+    "vencedor": "jogador1",
+    "perdedor": "jogador2",
+    "torres_perdidas_jogador1": 1,
+    "torres_perdidas_jogador2": 2,
+    "duracao": 150
+  }
+},
+{
+  "_id": {
+    "$oid": "670be1d404b67fb06771d411"
+  },
+  "jogador1": {
+    "nome": "TitanCrusher",
+    "deck": [
+      {
+        "nome": "Golem"
+      },
+      {
+        "nome": "Valquíria"
+      },
+      {
+        "nome": "Mago"
+      },
+      {
+        "nome": "Espírito de Gelo"
+      }
+    ]
+  },
+  "jogador2": {
+    "nome": "StormBringer",
+    "deck": [
+      {
+        "nome": "Cavaleiro"
+      },
+      {
+        "nome": "Bola de Fogo"
+      },
+      {
+        "nome": "Canhão"
+      },
+      {
+        "nome": "Arqueiras"
+      }
+    ]
+  },
+  "timestamp": 1697215800,
+  "resultado": {
+    "vencedor": "jogador1",
+    "perdedor": "jogador2",
+    "torres_perdidas_jogador1": 0,
+    "torres_perdidas_jogador2": 2,
+    "duracao": 160
+  }
+}]

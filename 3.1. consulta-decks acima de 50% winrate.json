@@ -1,0 +1,102 @@
+[{
+  "_id": [
+    {
+      "nome": "Golem"
+    },
+    {
+      "nome": "Valquíria"
+    },
+    {
+      "nome": "Mago"
+    },
+    {
+      "nome": "Espírito de Gelo"
+    }
+  ],
+  "vitorias": 1,
+  "derrotas": 0,
+  "deck": [
+    {
+      "nome": "Golem"
+    },
+    {
+      "nome": "Valquíria"
+    },
+    {
+      "nome": "Mago"
+    },
+    {
+      "nome": "Espírito de Gelo"
+    }
+  ],
+  "total_partidas": 1,
+  "percentual_vitorias": 1
+},
+{
+  "_id": [
+    {
+      "nome": "Gigante"
+    },
+    {
+      "nome": "Cavaleiro"
+    },
+    {
+      "nome": "Lápide"
+    },
+    {
+      "nome": "Goblins de Lança"
+    }
+  ],
+  "vitorias": 1,
+  "derrotas": 0,
+  "deck": [
+    {
+      "nome": "Gigante"
+    },
+    {
+      "nome": "Cavaleiro"
+    },
+    {
+      "nome": "Lápide"
+    },
+    {
+      "nome": "Goblins de Lança"
+    }
+  ],
+  "total_partidas": 1,
+  "percentual_vitorias": 1
+},
+{
+  "_id": [
+    {
+      "nome": "Golem"
+    },
+    {
+      "nome": "Cavaleiro"
+    },
+    {
+      "nome": "Mini P.E.K.K.A"
+    },
+    {
+      "nome": "Flechas"
+    }
+  ],
+  "vitorias": 2,
+  "derrotas": 0,
+  "deck": [
+    {
+      "nome": "Golem"
+    },
+    {
+      "nome": "Cavaleiro"
+    },
+    {
+      "nome": "Mini P.E.K.K.A"
+    },
+    {
+      "nome": "Flechas"
+    }
+  ],
+  "total_partidas": 2,
+  "percentual_vitorias": 1
+}]

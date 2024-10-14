@@ -1,0 +1,113 @@
+//porcentagem-vitoria-derrota
+
+[
+  {
+    $match: {
+      timestamp: {
+        $gte: 1697212200,
+        $lte: 1697214900
+      },
+      $or: [
+        {
+          "jogador1.deck.nome": "Gigante"
+        },
+        {
+          "jogador2.deck.nome": "Gigante"
+        }
+      ]
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      vitorias: {
+        $sum: {
+          $cond: [
+            {
+              $and: [
+                {
+                  $eq: [
+                    "$resultado.vencedor",
+                    "jogador1"
+                  ]
+                },
+                // Verifica se o jogador 1 venceu
+                {
+                  $in: [
+                    "Gigante",
+                    "$jogador1.deck.nome"
+                  ]
+                } // Verifica se "Gigante" está no deck do jogador 1
+              ]
+            },
+            1,
+            0
+          ]
+        }
+      },
+      derrotas: {
+        $sum: {
+          $cond: [
+            {
+              $and: [
+                {
+                  $eq: [
+                    "$resultado.perdedor",
+                    "jogador2"
+                  ]
+                },
+                // Verifica se o jogador 2 perdeu
+                {
+                  $in: [
+                    "Gigante",
+                    "$jogador2.deck.nome"
+                  ]
+                } // Verifica se "Gigante" está no deck do jogador 2
+              ]
+            },
+            1,
+            0
+          ]
+        }
+      }
+    }
+  },
+  {
+    $project: {
+      vitorias: 1,
+      // Inclui o total de vitórias
+      derrotas: 1,
+      // Inclui o total de derrotas
+      total: {
+        $add: ["$vitorias", "$derrotas"]
+      },
+      // Total de batalhas
+      porcentagem_vitorias: {
+        $multiply: [
+          {
+            $divide: [
+              "$vitorias",
+              {
+                $add: ["$vitorias", "$derrotas"]
+              }
+            ]
+          },
+          100 // Calcula a porcentagem de vitórias
+        ]
+      },
+      porcentagem_derrotas: {
+        $multiply: [
+          {
+            $divide: [
+              "$derrotas",
+              {
+                $add: ["$vitorias", "$derrotas"]
+              }
+            ]
+          },
+          100 // Calcula a porcentagem de derrotas
+        ]
+      }
+    }
+  }
+]

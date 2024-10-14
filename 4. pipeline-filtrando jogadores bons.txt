@@ -1,0 +1,13 @@
+//filtrando jogadores bons
+[
+  {
+    $match: {
+      trofeus: {
+        $gt: 1500
+      },
+      nivel: {
+        $gt: 10
+      }
+    }
+  }
+]

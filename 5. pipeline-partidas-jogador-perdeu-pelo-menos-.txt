@@ -1,0 +1,10 @@
+//partidas-jogador-perdeu-pelo-menos-1-torre
+[
+  {
+    $match: {
+      "resultado.torres_perdidas_jogador1": {
+        $lte: 1
+      }
+    }
+  }
+]

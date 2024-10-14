@@ -1,0 +1,73 @@
+//decks acima de 50% winrate
+
+[
+  {
+    $match: {
+      timestamp: {
+        $gte: 1697213100,
+        // Timestamp inicial
+        $lte: 1697217600 // Timestamp final
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$deck.nome",
+      // Agrupando pelo nome da carta
+      vitorias: {
+        $sum: {
+          $cond: [
+            {
+              $eq: [
+                "$resultado.vencedor",
+                "jogador1"
+              ]
+            },
+            // Contando vitórias do jogador 1
+            1,
+            0
+          ]
+        }
+      },
+      derrotas: {
+        $sum: {
+          $cond: [
+            {
+              $eq: [
+                "$resultado.perdedor",
+                "jogador1"
+              ]
+            },
+            // Contando derrotas do jogador 1
+            1,
+            0
+          ]
+        }
+      }
+    }
+  },
+  {
+    $project: {
+      deck_combo: "$_id",
+      vitorias: 1,
+      derrotas: 1
+    }
+  },
+  {
+    $match: {
+      $expr: {
+        $gt: [
+          {
+            $divide: [
+              "$vitorias",
+              {
+                $add: ["$vitorias", "$derrotas"]
+              }
+            ]
+          },
+          0.2
+        ]
+      }
+    }
+  }
+]

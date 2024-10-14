@@ -1,0 +1,52 @@
+//contagem-derrotas-pelo-combo-de-cartas
+
+[
+  {
+    $match: {
+      timestamp: {
+        $gte: 1697216700,
+        $lte: 1697217600
+      }
+    }
+  },
+  {
+    $match: {
+      "resultado.vencedor": "jogador2" // jogador 1 perdeu
+    }
+  },
+  {
+    $group: {
+      _id: "$_id",
+      deck: {
+        $push: "$jogador1.deck.nome"
+      },
+      // Criar um array com as cartas do deck
+      derrotas: {
+        $sum: 1
+      } // Contar derrotas
+    }
+  },
+  {
+    $project: {
+      total_derrotas: "$derrotas",
+      comboCompleto: {
+        $setIsSubset: [
+          [
+            "Gigante",
+            "Cavaleiro",
+            "Bola de Fogo",
+            "Arqueiras"
+          ],
+          {
+            $arrayElemAt: ["$deck", 0]
+          } // Usar o primeiro elemento do array deck
+        ]
+      }
+    }
+  },
+  {
+    $match: {
+      comboCompleto: true
+    }
+  }
+]

@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "670be1c404b67fb06771d388"
+  },
+  "nickname": "ShadowHunter",
+  "tempo_jogo": 95,
+  "trofeus": 1600,
+  "nivel": 12
+},
+{
+  "_id": {
+    "$oid": "670be1c404b67fb06771d390"
+  },
+  "nickname": "FrostWolf",
+  "tempo_jogo": 75,
+  "trofeus": 1700,
+  "nivel": 11
+},
+{
+  "_id": {
+    "$oid": "670be1c404b67fb06771d395"
+  },
+  "nickname": "VortexWarrior",
+  "tempo_jogo": 90,
+  "trofeus": 1650,
+  "nivel": 12
+},
+{
+  "_id": {
+    "$oid": "670be1c404b67fb06771d398"
+  },
+  "nickname": "IronFist",
+  "tempo_jogo": 170,
+  "trofeus": 1750,
+  "nivel": 13
+}]
